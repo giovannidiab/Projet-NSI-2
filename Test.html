@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question pour un champion d'NSI</title>
+    <script src='Javascriptfile.js'></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #timer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<div id="timer">Time remaining: 5:00</div>
+<div class="container">
+    <h1> Architectures matérielles et systèmes d'exploitation</h1>
+    <h4>I-Lequel de ces périphériques n'est pas un périphérique d'entrée ?</h4>
+    <input type='radio' id='radio1' name='Q1'><label for='radio1'>moniteur</label><br>
+    <input type='radio' id='radio2' name='Q1'><label for='radio2'>souris</label><br>
+    <input type='radio' id='radio3' name='Q1'><label for='radio3'>clavier</label><br>
+    <input type='radio' id='radio4' name='Q1'><label for='radio4'>scanner</label><br>
+
+    <h4>II-Sachant que le répertoire courant contient les fichiers fich.txt, mafich.txt et programme.py, quel est le résultat de la commande ls fich* dans un shell Linux ?</h4>
+    <input type='radio' id='radio5' name='Q2'><label for='radio5'>fich.txt mafich.txt</label><br>
+    <input type='radio' id='radio6' name='Q2'><label for='radio6'>mafich.txt</label><br>
+    <input type='radio' id='radio7' name='Q2'><label for='radio7'>fich.txt</label><br>
+    <input type='radio' id='radio8' name='Q2'><label for='radio8'>programme.py</label><br>
+
+    <h4>III-Dans la console Linux, étant positionné dans le répertoire /home/marcelH/travail, quelle commande faut-il exécuter pour remonter dans l'arborescence vers le répertoire /home/marcelH ?</h4>
+    <input type='radio' id='radio9' name='Q3'><label for='radio9'>cd .</label><br>
+    <input type='radio' id='radio10' name='Q3'><label for='radio10'>cd ..</label><br>
+    <input type='radio' id='radio11' name='Q3'><label for='radio11'>cd ...</label><br>
+    <input type='radio' id='radio12' name='Q3'><label for='radio12'>cd /../.</label><br>
+
+    <h4>IV-Lorsqu'un utilisateur lance une application, le système d'exploitation va l'ouvrir dans :</h4>
+    <input type='checkbox' id='check1'><label for='check1'>un espace disponible du disque SSD</label><br>
+    <input type='checkbox' id='check2'><label for='check2'>un espace disponible du disque HDD</label><br>
+    <input type='checkbox' id='check3'><label for='check3'>un espace disponible de la RAM</label><br>
+    <input type='checkbox' id='check4'><label for='check4'>un espace disponible de la ROM</label><br><br>
+
+    <h4>V-La commande chmod a-r mon_fichier :</h4>
+    <input type='checkbox' id='check5'><label for='check5'>permet à tous (all en anglais) la lecture de mon_fichier</label><br>
+    <input type='checkbox' id='check6'><label for='check6'>interdit à tous (all en anglais) la lecture de mon_fichier</label><br>
+    <input type='checkbox' id='check7'><label for='check7'>permet à tous (all en anglais) l'écriture dans mon_fichier</label><br>
+    <input type='checkbox' id='check8'><label for='check8'>interdit à tous (all en anglais) l'écriture dans mon_fichier</label><br><br>
+
+    <input type='button' id='boutton1' style="text-align: left;" value='Resultat' onclick='scoreAndBlock()'>
+    <div id="score"></div>
+    <a href="index.html"> <button class="simple-button">Revenir A La Page Home</button> </a>
+
+</div>
+<script>
+    const timer = document.getElementById("timer");
+    let timeLeft = 300; 
+
+    const updateTimer = () => {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+
+        timer.textContent = `Time remaining: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+
+        if (timeLeft <= 0) {
+            clearInterval(intervalId);
+            window.location.href = 'score.html'; 
+            return;
+        }
+
+        timeLeft--;
+    };
+    updateTimer();
+    const intervalId = setInterval(updateTimer, 1000);
+</script>
+
+
+</body>
+</html>
+
+
+  

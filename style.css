@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 120vh;
+    background-image: linear-gradient(rgba(102, 55, 102, 0.65),rgba(102,55,102,0.65)), url(images/Background.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    justify-content: right;
+}
+
+nav{
+    width: 100%;
+    display:flex;
+    align-items: top;
+    justify-content: space-between; 
+    padding: 1px;
+    height: 130px;
+}
+
+#icon1 {
+    width: 200px;
+    height: 130px;
+}
+ul{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+}
+
+ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+#title1{
+    color:beige;
+    padding-top: 45px;
+    
+}
+h1{
+    font-size: 40px;
+    color: rgb(221, 220, 245);
+    padding-top: 50px;
+}
+h2{
+    font-size: 25px;
+    color: rgb(221, 220, 245);
+    padding-top: 50px;
+}
+h3{
+    font-size: 40px;
+    color:beige;
+    padding-top: 30px;
+}
+p{
+    font-size: 15px;
+    color:beige;
+    padding-top: 15px;  
+}
+
+.simple-button {
+    background-color: #ab55a6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 35px;
+}
+
+.simple-button:hover {
+    background-color: #4280a8;
+}
+h4{
+    font-size: 20px;
+    color:beige;
+    padding-top: 30px;
+}
+label{
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+    padding-top: 10px;
+}
+#title2{
+    color:beige;
+    padding-top: 60px;
+    
+}
+#boutton1{
+    font-size: 42px;
+    color: #4280a8;
+    padding-right: 4px;
+}
+#score{
+    font-size: 42px;
+    color: rgb(221, 220, 245);
+}
